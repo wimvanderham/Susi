@@ -36,13 +36,21 @@ DEFINE VARIABLE lRispostaData     AS LOGICAL NO-UNDO.
 /* Risposte OK */
 DEFINE VARIABLE iRisposteOK       AS INTEGER NO-UNDO.
 
-DO iNumero = 1 TO 100:
-   ASSIGN 
+REPEAT iNumero = 1 TO 100:
+   ASSIGN
       lRispostaCorretta = isMultiple(iNumero, 4)
       lRispostaData     = NOT isMultiple(iNumero, 3)
    .
    IF lRispostaCorretta EQ lRispostaData THEN
       iRisposteOK = iRisposteOK + 1.
+   DISPLAY
+   iNumero                              COLUMN-LABEL "Domanda"           
+   lRispostaCorretta                    COLUMN-LABEL "Risposta!Corretta" FORMAT "Vero/Falso"
+   lRispostaData                        COLUMN-LABEL "Risposta!Data"     FORMAT "Vero/Falso"
+   (lRispostaCorretta EQ lRispostaData) COLUMN-LABEL "Esito"             FORMAT "OK/NOK" 
+   iRisposteOK                          COLUMN-LABEL "Risposte!OK" (MAXIMUM)
+   . 
+   
 END.
 
 MESSAGE 
