@@ -39,7 +39,7 @@ DEFINE VARIABLE iRisposteOK       AS INTEGER NO-UNDO.
 DO iNumero = 1 TO 100:
    ASSIGN 
       lRispostaCorretta = isMultiple(iNumero, 4)
-      lRispostaData     = NOT isMultiple(iNumero, 3)
+      lRispostaData     = isMultiple(iNumero, 3)
    .
    IF lRispostaCorretta EQ lRispostaData THEN
       iRisposteOK = iRisposteOK + 1.
