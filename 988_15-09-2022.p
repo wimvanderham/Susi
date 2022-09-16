@@ -45,7 +45,8 @@ DO iNumero = 1 TO 100:
       iRisposteOK = iRisposteOK + 1.
 END.
 
-MESSAGE "Risposte OK:" iRisposteOK
+MESSAGE 
+SUBSTITUTE ("Risposte OK: &1", iRisposteOK)
 VIEW-AS ALERT-BOX. 
    
 /* ************************  Function Implementations ***************** */
