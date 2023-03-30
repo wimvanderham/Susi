@@ -123,38 +123,38 @@ IF lOk EQ FALSE THEN DO:
 END.
 
 
-/* TEST FUNCTION getCombinazioni */
-lvcListaPlayers = getCombinazioni(1, "", "").
-MESSAGE "1" SKIP
-SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers)
-VIEW-AS ALERT-BOX.
-
-lvcListaPlayers = getCombinazioni(1, "", "1").
-MESSAGE "1 exclude 1" SKIP
-SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers)
-VIEW-AS ALERT-BOX.
-
-lvcListaPlayers = getCombinazioni(2, "", "").
-MESSAGE "2" SKIP
-SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers)
-VIEW-AS ALERT-BOX.
-
-
-lvcListaPlayers = getCombinazioni(3, "", "").
-MESSAGE "3" SKIP
-SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers, "")
-VIEW-AS ALERT-BOX.
-
-
-lvcListaPlayers = getCombinazioni(1, "1", "").
-MESSAGE "Add 1 a 1" SKIP
-SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers, "")
-VIEW-AS ALERT-BOX.
-
-lvcListaPlayers = getCombinazioni(3, "1", "").
-MESSAGE "Impresa 1, possibili squadre con Ada" SKIP
-SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers, "")
-VIEW-AS ALERT-BOX.
+/*/* TEST FUNCTION getCombinazioni */                                       */
+/*lvcListaPlayers = getCombinazioni(1, "", "").                             */
+/*MESSAGE "1" SKIP                                                          */
+/*SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers)    */
+/*VIEW-AS ALERT-BOX.                                                        */
+/*                                                                          */
+/*lvcListaPlayers = getCombinazioni(1, "", "1").                            */
+/*MESSAGE "1 exclude 1" SKIP                                                */
+/*SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers)    */
+/*VIEW-AS ALERT-BOX.                                                        */
+/*                                                                          */
+/*lvcListaPlayers = getCombinazioni(2, "", "").                             */
+/*MESSAGE "2" SKIP                                                          */
+/*SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers)    */
+/*VIEW-AS ALERT-BOX.                                                        */
+/*                                                                          */
+/*                                                                          */
+/*lvcListaPlayers = getCombinazioni(3, "", "").                             */
+/*MESSAGE "3" SKIP                                                          */
+/*SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers, "")*/
+/*VIEW-AS ALERT-BOX.                                                        */
+/*                                                                          */
+/*                                                                          */
+/*lvcListaPlayers = getCombinazioni(1, "1", "").                            */
+/*MESSAGE "Add 1 a 1" SKIP                                                  */
+/*SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers, "")*/
+/*VIEW-AS ALERT-BOX.                                                        */
+/*                                                                          */
+/*lvcListaPlayers = getCombinazioni(3, "1", "").                            */
+/*MESSAGE "Impresa 1, possibili squadre con Ada" SKIP                       */
+/*SUBSTITUTE ("#&1: &2", NUM-ENTRIES (lvcListaPlayers), lvcListaPlayers, "")*/
+/*VIEW-AS ALERT-BOX.                                                        */
 
 
 OUTPUT TO "BeaverGames_soluzione.txt".
